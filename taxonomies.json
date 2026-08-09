@@ -1,0 +1,303 @@
+{
+  "contentTypes": [
+    {
+      "id": "listing",
+      "name": "Listing",
+      "description": "A physical place or point of interest on the island. One back-end content type holds many different kinds of places because every one of them appears on the interactive map. Visitors never see them grouped this way.",
+      "examples": [
+        "A food vendor",
+        "A historic site",
+        "A public art piece",
+        "A restroom",
+        "A climate pilot program",
+        "A tenant organization"
+      ]
+    },
+    {
+      "id": "event",
+      "name": "Event",
+      "description": "A dated happening on the island, from tours and performances to festivals and community gatherings.",
+      "examples": [
+        "A guided tour",
+        "A festival",
+        "A workshop"
+      ]
+    },
+    {
+      "id": "blog",
+      "name": "Blog",
+      "description": "Editorial content: announcements, stories, itineraries, visitor information, and event recaps.",
+      "examples": [
+        "An itinerary post",
+        "A seasonal announcement",
+        "An event recap"
+      ]
+    },
+    {
+      "id": "press",
+      "name": "Press",
+      "description": "Press releases and media coverage.",
+      "examples": [
+        "A press release",
+        "A media mention"
+      ]
+    },
+    {
+      "id": "property",
+      "name": "Property",
+      "description": "Leasable buildings and spaces, supporting the real estate and leasing side of the site.",
+      "examples": [
+        "A building available for lease",
+        "An event space"
+      ]
+    },
+    {
+      "id": "permit",
+      "name": "Permit",
+      "description": "Permitted uses of the island: rentals, filming, events in public space.",
+      "examples": [
+        "A picnic area rental",
+        "A film permit"
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "id": "listing-type",
+      "name": "Listing Type",
+      "description": "Type of place.",
+      "appliedTo": [
+        "listing"
+      ],
+      "mapFilter": true,
+      "visibility": "visitor-facing",
+      "notes": null,
+      "terms": [
+        "Food & Drink",
+        "Historic Site",
+        "Organization in Residence",
+        "Public Art",
+        "Recreation (e.g. bike rental, sport field)",
+        "Business/Tenant",
+        "Climate Pilot",
+        "Artist in Residency",
+        "Amenity (e.g. bathroom, water fountain, picnic tables)"
+      ]
+    },
+    {
+      "id": "event-type",
+      "name": "Event Type",
+      "description": "Type of event.",
+      "appliedTo": [
+        "event"
+      ],
+      "mapFilter": false,
+      "visibility": "visitor-facing",
+      "notes": null,
+      "terms": [
+        "Tour",
+        "Fundraiser",
+        "Workshop/Class",
+        "Talk",
+        "Performance",
+        "Recreation or Race",
+        "Festival",
+        "Community Gathering"
+      ]
+    },
+    {
+      "id": "blog-type",
+      "name": "Blog Type",
+      "description": "Content type or format for blog posts.",
+      "appliedTo": [
+        "blog"
+      ],
+      "mapFilter": false,
+      "visibility": "visitor-facing",
+      "notes": "Terms should not overlap with Focus.",
+      "terms": [
+        "Announcement",
+        "Visitor Information",
+        "Story",
+        "Itinerary",
+        "Event Recap"
+      ]
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "description": "Broad focus, aligning with the content pillars plus history.",
+      "appliedTo": [
+        "listing",
+        "blog",
+        "press"
+      ],
+      "mapFilter": "Yes, filtering Listings",
+      "visibility": "visitor-facing",
+      "notes": null,
+      "terms": [
+        "Art",
+        "Climate",
+        "Open Space",
+        "History"
+      ]
+    },
+    {
+      "id": "amenities",
+      "name": "Amenities",
+      "description": "Practical amenities that would not warrant their own listing page, but that users would want to know about a location.",
+      "appliedTo": [
+        "listing",
+        "event"
+      ],
+      "mapFilter": true,
+      "visibility": "visitor-facing",
+      "notes": null,
+      "terms": [
+        "Accessible Entrance",
+        "Restrooms",
+        "Bike Parking",
+        "Picnic Tables",
+        "Rentals/Permits Available",
+        "Water Fountain",
+        "Wifi Available"
+      ]
+    },
+    {
+      "id": "dietary-preferences",
+      "name": "Dietary Preferences",
+      "description": "Only applied to food and drink listings.",
+      "appliedTo": [
+        "listing"
+      ],
+      "mapFilter": false,
+      "visibility": "visitor-facing",
+      "notes": "Scoped to Food & Drink listings only.",
+      "terms": [
+        "Vegetarian",
+        "Vegan",
+        "Gluten-Free",
+        "Halal",
+        "Kosher",
+        "Pescatarian"
+      ]
+    },
+    {
+      "id": "region-area",
+      "name": "Region/Area",
+      "description": "Useful for return visitors who know regions, and aligns people to wayfinding signs on the island.",
+      "appliedTo": [
+        "listing",
+        "event",
+        "property",
+        "blog"
+      ],
+      "mapFilter": null,
+      "visibility": "visitor-facing",
+      "notes": "Should not lean on this too heavily; most visitors do not know these reference points.",
+      "terms": [
+        "LMCC, Building 110",
+        "Battery Maritime Building",
+        "Colonels Row",
+        "Western Promenade",
+        "King Avenue Food Court",
+        "Soissons Landing",
+        "Liggett Terrace",
+        "Discovery Hill"
+      ]
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "description": "Optional status for things like public art. Allows coming-soon pieces to appear on the website before they open.",
+      "appliedTo": [
+        "listing"
+      ],
+      "mapFilter": null,
+      "visibility": "visitor-facing",
+      "notes": "Not the same as the automatic open-now indicator, which is computed from hours and season data.",
+      "terms": [
+        "On View",
+        "Coming Soon",
+        "Not Open to Public"
+      ]
+    },
+    {
+      "id": "cost",
+      "name": "Cost",
+      "description": "Broad cost category.",
+      "appliedTo": [
+        "event",
+        "listing"
+      ],
+      "mapFilter": null,
+      "visibility": "visitor-facing",
+      "notes": "Not the same as the custom text field for price details.",
+      "terms": [
+        "Free",
+        "Paid",
+        "Varies"
+      ]
+    },
+    {
+      "id": "season",
+      "name": "Season",
+      "description": "Seasonal availability.",
+      "appliedTo": [
+        "listing",
+        "event",
+        "blog",
+        "permit"
+      ],
+      "mapFilter": null,
+      "visibility": "visitor-facing",
+      "notes": "Might end up being a custom field instead of a taxonomy.",
+      "terms": [
+        "Year Round",
+        "May-Oct",
+        "Jul-Aug"
+      ]
+    },
+    {
+      "id": "tenant-disciplines",
+      "name": "Tenant Disciplines",
+      "description": "For filtering tenants and businesses only.",
+      "appliedTo": [
+        "listing"
+      ],
+      "mapFilter": null,
+      "visibility": "Only visible on the tenant/business page as a filter",
+      "notes": null,
+      "terms": [
+        "Arts & Culture",
+        "Education",
+        "Environment & Climate",
+        "Amenity",
+        "Nonprofit",
+        "Tech",
+        "Food & Beverage"
+      ]
+    },
+    {
+      "id": "climate-challenges",
+      "name": "Climate Challenges",
+      "description": "For filtering climate pilot programs only.",
+      "appliedTo": [
+        "listing"
+      ],
+      "mapFilter": null,
+      "visibility": "Only visible on the Climate Pilot page as a filter",
+      "notes": null,
+      "terms": [
+        "Urban Agriculture",
+        "Energy",
+        "Adaptive Infrastructure",
+        "Water",
+        "Mobility & Logistics",
+        "Waste",
+        "Circular Economy",
+        "Adaptation"
+      ]
+    }
+  ]
+}

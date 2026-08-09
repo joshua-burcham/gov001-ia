@@ -1,29 +1,30 @@
-# GOV001 — Interactive IA Explainer
+# GOV001 IA Explainer
 
-An interactive explanation of the information architecture for the Governors Island
-website redesign (GOV001). Built to help the client team understand how the new site
-is organized: a small set of hand-crafted pages, plus structured content types and
-taxonomies that automatically feed the map, calendar, and landing pages.
+A single-page, lightly interactive HTML explainer of the proposed WordPress content
+types and taxonomies for The Trust for Governors Island website redesign. Built by
+Radish Lab to present during wireframes round 1. See `CLAUDE.md` for the full brief
+(purpose, framing rules, page structure, and vocabulary rules).
 
-**Plain HTML/CSS/JS — no build step, no dependencies.** Open `index.html` in a
-browser, or host the folder anywhere static files can live (GitHub Pages, Netlify, etc.).
+## Files
 
-## Sections
+- `index.html` page shell and copy
+- `taxonomies.json` all content model data; the page renders everything from this file
+- `css/style.css` styles (deliberately schematic, one accent color)
+- `js/app.js` rendering and interactions (vanilla JS, no dependencies)
 
-| Section | What it shows |
-|---|---|
-| **Overview** | The core concept: enter content once, it appears everywhere it should. |
-| **Sitemap** | Collapsible page tree with per-page notes and auto-populated badges. ⚠️ Currently a *draft reconstruction* from the migration sheet's UX notes — reconcile with the confirmed Figma sitemap (Sitemap Delivery R2) before sharing externally. |
-| **Content Types** | The 7 post types (Listing, Event, Blog, Press, Permit, Property, People) and the full Listing field list. |
-| **Taxonomies** | All 12 taxonomies with terms, rules, and a content-type filter. |
-| **See It in Action** | 7 real test listings from the IA sheet (Cabin, Pizzeria Fantastica, Adaptora…) rendered as mock listing pages, showing where each one surfaces and why. |
+## Running locally
 
-## Editing the content
+The page fetches `taxonomies.json`, so it needs to be served over HTTP rather than
+opened straight from disk:
 
-All IA data lives in **`js/data.js`** — post types, listing fields, taxonomies,
-example listings, and the sitemap tree. It mirrors the working
-[Gov IA Google Sheet](https://docs.google.com/spreadsheets/d/1UuL-HGzPrNgtZYGYFjbSDu-Co277OTYYc8CKLZ1Ol_0/edit)
-(Taxonomy List, Listing Testing, and Migration Plan tabs). When the sheet changes,
-update `data.js` to match.
+```
+python3 -m http.server
+```
 
-Layout and interactions are in `index.html`, `css/style.css`, and `js/app.js`.
+Then open http://localhost:8000. Deploys as a static page to Netlify, consistent
+with the GOV001 map prototype workflow.
+
+## Updating the data
+
+Edit `taxonomies.json` only; nothing is hardcoded in the markup. Schema is documented
+in `CLAUDE.md` under "Data".

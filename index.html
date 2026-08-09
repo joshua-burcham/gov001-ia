@@ -3,175 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOV001 — How the New Governors Island Website Is Organized</title>
-  <meta name="description" content="An interactive explanation of the information architecture for the Governors Island website redesign.">
+  <title>GOV001 Content Model Explainer</title>
+  <meta name="description" content="An interactive explanation of the proposed content types and taxonomies for the Governors Island website redesign.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231d4ed8'/%3E%3Ctext x='8' y='12' font-size='9' font-family='sans-serif' fill='white' text-anchor='middle'%3EIA%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <span class="brand-mark">GI</span>
-        <div class="brand-text">
-          <strong>Governors Island Website Redesign</strong>
-          <span>How the new site is organized</span>
-        </div>
-      </div>
-      <nav class="tabs" id="tabs" aria-label="Sections">
-        <a href="#overview" data-tab="overview" class="tab">Overview</a>
-        <a href="#sitemap" data-tab="sitemap" class="tab">Sitemap</a>
-        <a href="#content-types" data-tab="content-types" class="tab">Content Types</a>
-        <a href="#taxonomies" data-tab="taxonomies" class="tab">Taxonomies</a>
-        <a href="#examples" data-tab="examples" class="tab">See It in Action</a>
-      </nav>
+  <header class="page-header">
+    <div class="wrap">
+      <p class="kicker">Governors Island website redesign · internal explainer</p>
+      <h1>How content on the new site will be organized</h1>
+      <p class="not-a-wireframe">This is an explanation of the proposed content model, not a wireframe or prototype. Nothing on this page implies visual design, layout, or page templates.</p>
     </div>
   </header>
 
   <main class="wrap">
 
-    <!-- ============ OVERVIEW ============ -->
-    <section id="panel-overview" class="panel" data-panel="overview">
-      <div class="hero">
-        <h1>Enter it once.<br>It shows up everywhere it should.</h1>
-        <p class="lede">
-          The current govisland.com is built almost entirely out of hand-made pages —
-          hundreds of them, each maintained separately. The new site is built around a
-          different idea: <strong>structured content</strong>. A restaurant, an artwork, or a
-          climate pilot is entered <em>once</em>, tagged with what it is, and the site takes
-          care of showing it on the map, the calendar, and every relevant page.
-        </p>
-      </div>
-
-      <div class="concept-grid">
-        <div class="concept-card">
-          <div class="concept-num">1</div>
-          <h3>Pages</h3>
-          <p>A small set of hand-crafted pages — the homepage, pillar pages, Plan Your Visit —
-          that tell the Island's story. Roughly 40 of them, down from hundreds.</p>
-          <a class="text-link" href="#sitemap">Browse the sitemap →</a>
-        </div>
-        <div class="concept-card">
-          <div class="concept-num">2</div>
-          <h3>Content types</h3>
-          <p>Structured entries — <strong>Listings</strong>, <strong>Events</strong>,
-          <strong>Blog posts</strong>, <strong>Properties</strong> and more — with defined fields
-          instead of freeform pages.</p>
-          <a class="text-link" href="#content-types">Meet the content types →</a>
-        </div>
-        <div class="concept-card">
-          <div class="concept-num">3</div>
-          <h3>Taxonomies</h3>
-          <p>Tags with rules. <em>What kind of place is it? What's its focus? What amenities does
-          it have?</em> Taxonomies power filters, map layers, and landing pages.</p>
-          <a class="text-link" href="#taxonomies">Explore the taxonomies →</a>
-        </div>
-      </div>
-
-      <div class="flow-demo">
-        <h2>The core idea, in one picture</h2>
-        <div class="flow">
-          <div class="flow-source">
-            <div class="mini-card">
-              <div class="mini-card-img">🍕</div>
-              <div class="mini-card-body">
-                <strong>Pizzeria Fantastica</strong>
-                <span class="mini-tags">
-                  <em>Food&nbsp;&amp;&nbsp;Drink</em><em>King Ave Food Court</em><em>Vegetarian</em>
-                </span>
-              </div>
-            </div>
-            <p class="flow-caption">One Listing, entered once</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 60 120" width="48" height="96">
-              <path d="M4 60 H40 M40 60 L40 12 H52 M40 60 L40 108 H52 M40 60 H52" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M48 8 l6 4 -6 4 M48 56 l6 4 -6 4 M48 104 l6 4 -6 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flow-targets">
-            <div class="flow-target">🗺 <span>A pin on the <strong>interactive map</strong>, filterable by type &amp; amenities</span></div>
-            <div class="flow-target">🍽 <span>A card on <strong>Food &amp; Drink</strong>, filterable by dietary preference</span></div>
-            <div class="flow-target">🎯 <span>A card on <strong>Things to Do</strong> whenever it's open</span></div>
-          </div>
-        </div>
-        <p class="flow-note">Change the hours once, and they're right everywhere. That's the whole trick.</p>
-        <p class="cta-row"><a class="button" href="#examples">See real examples from the Island →</a></p>
-      </div>
+    <section class="intro" aria-labelledby="intro-h">
+      <h2 id="intro-h" class="visually-hidden">Introduction</h2>
+      <p>
+        This page explains two things: how content will be organized in the back end of the new
+        website (<a href="#content-types">content types</a>), and how that organization will
+        surface for visitors as labels and filters (<a href="#taxonomies">taxonomies</a>).
+      </p>
+      <p>
+        We are sharing the information architecture earlier than we normally would because we
+        want your feedback on these structures, especially the taxonomy terms, before we survey
+        external users about them.
+      </p>
     </section>
 
-    <!-- ============ SITEMAP ============ -->
-    <section id="panel-sitemap" class="panel" data-panel="sitemap" hidden>
-      <div class="section-head">
-        <h1>Sitemap</h1>
-        <p class="lede">The page structure of the new site. Pages marked
-          <span class="badge badge-dynamic">auto-populated</span> don't hold hand-written
-          content — they're fed by content types and taxonomies. Click any page for notes.</p>
-        <p class="draft-note">⚠️ <strong>Working draft</strong> — reconstructed from the migration
-          sheet's UX notes. The confirmed sitemap lives in Figma (Sitemap Delivery R2); reconcile
-          before sharing externally.</p>
-      </div>
-      <div class="sitemap-layout">
-        <div id="sitemap-tree" class="sitemap-tree"></div>
-        <aside id="sitemap-detail" class="detail-card" aria-live="polite">
-          <p class="detail-placeholder">Select a page to see its notes.</p>
-        </aside>
-      </div>
+    <section id="content-types" aria-labelledby="ct-h">
+      <h2 id="ct-h">Content types</h2>
+      <p class="definition">
+        A <strong>content type</strong> is the shape a piece of content takes in the back end:
+        which fields it has and where it lives. Every item on the site belongs to exactly one
+        content type.
+      </p>
+      <div id="ct-grid" class="ct-grid"></div>
+      <p class="aside">
+        One of these is less intuitive than the rest. A visitor browsing public art and a visitor
+        finding a restroom on the map are both looking at Listings. Everything inside Listing is a
+        physical place on the island, and every one appears on the interactive map; that is why
+        they share a content type. Visitors never see the word "Listing" and never perceive these
+        as one group. The labels below do the visible differentiation.
+      </p>
     </section>
 
-    <!-- ============ CONTENT TYPES ============ -->
-    <section id="panel-content-types" class="panel" data-panel="content-types" hidden>
-      <div class="section-head">
-        <h1>Content Types</h1>
-        <p class="lede">Seven structured content types replace the old site's freeform pages.
-          Each has defined fields, and each knows whether it can appear on the map.</p>
-      </div>
-      <div id="post-type-grid" class="post-type-grid"></div>
+    <section id="taxonomies" aria-labelledby="tax-h">
+      <h2 id="tax-h">Taxonomies</h2>
+      <p class="definition">
+        A <strong>taxonomy</strong> is a set of labels applied to content. Labels are what
+        visitors actually see and use: filter chips, category names, badges. A single taxonomy
+        can apply to several content types.
+      </p>
+      <p class="aside">
+        Taxonomies marked <span class="badge badge-map">map filter</span> become filter chips on
+        the interactive island map. Some taxonomies only appear in one place on the site, and one
+        may become a plain field instead; those notes are flagged inline. Feedback on these edges
+        is exactly what we are looking for.
+      </p>
 
-      <div class="listing-fields-block">
-        <h2>Inside a Listing</h2>
-        <p>The Listing is the richest content type, so here's its full field list.
-          Fields marked <span class="req">*</span> are required; some only apply conditionally.</p>
-        <div id="listing-fields" class="field-list"></div>
+      <div class="view-toggle" role="group" aria-label="Choose a view of the taxonomy data">
+        <button type="button" id="toggle-by-type" class="toggle-btn" aria-pressed="true">By content type</button>
+        <button type="button" id="toggle-by-tax" class="toggle-btn" aria-pressed="false">By taxonomy</button>
       </div>
-    </section>
 
-    <!-- ============ TAXONOMIES ============ -->
-    <section id="panel-taxonomies" class="panel" data-panel="taxonomies" hidden>
-      <div class="section-head">
-        <h1>Taxonomies</h1>
-        <p class="lede">Twelve controlled vocabularies do the organizing. Some power the map,
-          some power filters on a single page, and a few only apply in special contexts.
-          Pick a content type to see which taxonomies apply to it.</p>
+      <div id="view-by-type" class="view">
+        <p class="view-question">"What labels can a given kind of content carry?"</p>
+        <div id="ct-picker" class="pill-row" role="group" aria-label="Pick a content type"></div>
+        <div id="tax-rows"></div>
       </div>
-      <div id="tax-filter" class="pill-row" role="group" aria-label="Filter taxonomies by content type"></div>
-      <div id="tax-grid" class="tax-grid"></div>
-    </section>
 
-    <!-- ============ EXAMPLES ============ -->
-    <section id="panel-examples" class="panel" data-panel="examples" hidden>
-      <div class="section-head">
-        <h1>See It in Action</h1>
-        <p class="lede">Seven real entries from the working IA sheet. Pick one to see how its
-          fields and tags translate into where it appears across the site — and what each
-          example teaches about the system.</p>
+      <div id="view-by-tax" class="view" hidden>
+        <p class="view-question">"Where does a given set of labels show up?"</p>
+        <div class="ct-strip-block">
+          <span class="ct-strip-label" id="ct-strip-label">Content types it touches light up as you move through the list:</span>
+          <div id="ct-strip" class="ct-strip" aria-hidden="true"></div>
+        </div>
+        <div class="by-tax-layout">
+          <div id="tax-list" class="tax-list" role="group" aria-label="Pick a taxonomy"></div>
+          <div id="tax-detail" class="tax-detail" aria-live="polite"></div>
+        </div>
       </div>
-      <div id="example-picker" class="pill-row" role="group" aria-label="Choose an example"></div>
-      <div id="example-stage" class="example-stage"></div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="page-footer">
     <div class="wrap">
-      <p>GOV001 · Governors Island website redesign · Information architecture explainer ·
-        <a href="https://radishlab.com">Radish Lab</a></p>
-      <p class="footer-fine">Data mirrors the working Gov IA sheet — a living document.
-        Details here may shift as UX work continues.</p>
+      <p>GOV001 · Trust for Governors Island website redesign · prepared by Radish Lab</p>
+      <p>This reflects the proposed model as of wireframes round 1 and will evolve with your feedback.</p>
     </div>
   </footer>
 
-  <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

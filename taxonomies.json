@@ -3,7 +3,7 @@
     {
       "id": "listing",
       "name": "Listing",
-      "description": "A physical place or point of interest on the island. One back-end content type holds many different kinds of places because every one of them appears on the interactive map. Visitors never see them grouped this way.",
+      "description": "A physical place or point of interest on the island. One back-end content type holds many different kinds of places because every one of them appears on the interactive map. Displaying them on the map makes the shared group feel natural to visitors and keeps them manageable as one set behind the scenes.",
       "examples": [
         "A food vendor",
         "A historic site",

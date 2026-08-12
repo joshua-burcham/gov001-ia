@@ -46,7 +46,6 @@
       const out = [];
       if (tax.mapFilter) out.push(el("span", { class: "badge badge-map", text: "map filter" }));
       if (isPageScoped(tax)) out.push(el("span", { class: "badge", text: "page-scoped" }));
-      if (tax.mapFilter === null) out.push(el("span", { class: "badge", text: "map filter TBD" }));
       return out;
     }
 

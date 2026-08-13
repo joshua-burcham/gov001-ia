@@ -21,7 +21,7 @@ This is explicitly NOT a wireframe, prototype, or design deliverable. Nothing on
 ## Page structure
 
 ### 1. Intro
-Short. States what this page is (an interactive explanation of the proposed content model) and what it is not (a wireframe or prototype). One or two sentences on why we're sharing IA earlier than usual: client feedback is needed before external user surveys about taxonomies.
+Short. States what this page is (an interactive explanation of the proposed content model) and what it is not (a wireframe or prototype), then points readers to the feedback spreadsheet. Keep it to those two beats; the rationale for sharing IA early is delivered verbally when the page is presented, not on the page.
 
 ### 2. Content Types
 Define content type in one plain sentence. Then a card per content type, all six with identical treatment: Listing, Event, Blog, Press, Property, Permit. Each card gets a one-line description and example items. Within its card, the Listing description carries the extra weight: the diversity of what lives inside it, the fact that everything in it is a mappable place (which is why it exists as one content type), and that this grouping is invisible to public users. Do not visually promote or demote any card; unequal treatment would confuse the model being explained.

@@ -13,7 +13,7 @@
   <header class="page-header">
     <div class="wrap">
       <p class="kicker">Governors Island website redesign · internal explainer</p>
-      <h1>How content on the new site will be organized</h1>
+      <h1>Content Types &amp; Taxonomies</h1>
       <p class="not-a-wireframe">This is an explanation of the proposed content model, not a wireframe or prototype. Nothing on this page implies visual design, layout, or page templates.</p>
     </div>
   </header>
@@ -28,9 +28,9 @@
         surface for visitors as labels and filters (<a href="#taxonomies">taxonomies</a>).
       </p>
       <p>
-        We are sharing the information architecture earlier than we normally would because we
-        want your feedback on these structures, especially the taxonomy terms, before we survey
-        external users about them.
+        Please share feedback in the
+        <a href="https://docs.google.com/spreadsheets/d/16LShWZiCzNxTRVAppZypEVO7MgpGQgss-PJFu_B5JMQ/edit?usp=sharing"
+           target="_blank" rel="noopener">Google Spreadsheet</a>.
       </p>
     </section>
 
@@ -42,14 +42,6 @@
         content type.
       </p>
       <div id="ct-grid" class="ct-grid"></div>
-      <p class="aside">
-        One of these is less intuitive than the rest at first glance. A food vendor, a public art
-        piece, and a restroom do not seem to belong together. But each one is a physical place on
-        the island that appears on the interactive map, and that is how people will experience
-        them on the site. Because of the map, keeping these in one group feels intuitive to
-        visitors on the front end, and it makes the content easier to manage as one consistent
-        set on the back end. The labels below handle the differentiation between kinds of places.
-      </p>
     </section>
 
     <section id="taxonomies" aria-labelledby="tax-h">
@@ -59,13 +51,6 @@
         visitors actually see and use: filter chips, category names, badges. A single taxonomy
         can apply to several content types.
       </p>
-      <p class="aside">
-        Some of these are used across the whole site, and some appear in only one place. One may
-        end up as a plain field rather than a set of labels. Open any taxonomy below to see where
-        visitors encounter it and what is still unsettled. Feedback on those edges is exactly what
-        we are looking for.
-      </p>
-
       <div class="view-toggle" role="group" aria-label="Choose a view of the taxonomy data">
         <button type="button" id="toggle-by-type" class="toggle-btn" aria-pressed="true">By content type</button>
         <button type="button" id="toggle-by-tax" class="toggle-btn" aria-pressed="false">By taxonomy</button>

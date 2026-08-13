@@ -63,13 +63,10 @@ h3 { font-size: 1.05rem; margin: 0 0 .3em; }
 }
 
 .not-a-wireframe {
-  border: 1px dashed var(--line);
-  background: var(--panel);
-  padding: 10px 16px;
   font-size: .92rem;
   color: var(--muted);
   max-width: 64ch;
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 }
 
 .page-footer {
@@ -90,15 +87,6 @@ main section { padding: 44px 0 0; }
 .definition {
   max-width: 66ch;
   margin-bottom: 24px;
-}
-
-.aside {
-  max-width: 66ch;
-  color: var(--muted);
-  font-size: .95rem;
-  border-left: 3px solid var(--line);
-  padding-left: 16px;
-  margin: 24px 0;
 }
 
 /* ---------- content type cards ---------- */

@@ -70,18 +70,17 @@
         "listing"
       ],
       "mapFilter": true,
-      "visibility": "visitor-facing",
+      "visibility": "Filter on multiple pages. Also used behind the scenes to pull content into dynamic modules.",
       "notes": null,
       "terms": [
         "Food & Drink",
         "Historic Site",
         "Organization in Residence",
         "Public Art",
-        "Recreation (e.g. bike rental, sport field)",
+        "Recreation",
         "Business/Tenant",
         "Climate Pilot",
-        "Artist in Residency",
-        "Amenity (e.g. bathroom, water fountain, picnic tables)"
+        "Amenity"
       ]
     },
     {
@@ -92,7 +91,7 @@
         "event"
       ],
       "mapFilter": false,
-      "visibility": "visitor-facing",
+      "visibility": "Visible to visitors.",
       "notes": null,
       "terms": [
         "Tour",
@@ -113,7 +112,7 @@
         "blog"
       ],
       "mapFilter": false,
-      "visibility": "visitor-facing",
+      "visibility": "Filter on the blog page.",
       "notes": "Terms should not overlap with Focus.",
       "terms": [
         "Announcement",
@@ -133,7 +132,7 @@
         "press"
       ],
       "mapFilter": "Yes, filtering Listings",
-      "visibility": "visitor-facing",
+      "visibility": "Filter on multiple pages. Also used behind the scenes to pull content into dynamic modules.",
       "notes": null,
       "terms": [
         "Art",
@@ -151,7 +150,7 @@
         "event"
       ],
       "mapFilter": true,
-      "visibility": "visitor-facing",
+      "visibility": "Filter on multiple pages.",
       "notes": null,
       "terms": [
         "Accessible Entrance",
@@ -171,7 +170,7 @@
         "listing"
       ],
       "mapFilter": false,
-      "visibility": "visitor-facing",
+      "visibility": "Filter on the Food & Drink page.",
       "notes": "Scoped to Food & Drink listings only.",
       "terms": [
         "Vegetarian",
@@ -193,7 +192,7 @@
         "blog"
       ],
       "mapFilter": null,
-      "visibility": "visitor-facing",
+      "visibility": "Filter on multiple pages.",
       "notes": "Should not lean on this too heavily; most visitors do not know these reference points.",
       "terms": [
         "LMCC, Building 110",
@@ -214,7 +213,7 @@
         "listing"
       ],
       "mapFilter": null,
-      "visibility": "visitor-facing",
+      "visibility": "Visible on multiple pages.",
       "notes": "Not the same as the automatic open-now indicator, which is computed from hours and season data.",
       "terms": [
         "On View",
@@ -231,7 +230,7 @@
         "listing"
       ],
       "mapFilter": null,
-      "visibility": "visitor-facing",
+      "visibility": "Visible on multiple pages.",
       "notes": "Not the same as the custom text field for price details.",
       "terms": [
         "Free",
@@ -250,7 +249,7 @@
         "permit"
       ],
       "mapFilter": null,
-      "visibility": "visitor-facing",
+      "visibility": "Visible on multiple pages.",
       "notes": "Might end up being a custom field instead of a taxonomy.",
       "terms": [
         "Year Round",
@@ -266,7 +265,7 @@
         "listing"
       ],
       "mapFilter": null,
-      "visibility": "Only visible on the tenant/business page as a filter",
+      "visibility": "Only visible on the tenant/business page as a filter.",
       "notes": null,
       "terms": [
         "Arts & Culture",
@@ -286,7 +285,7 @@
         "listing"
       ],
       "mapFilter": null,
-      "visibility": "Only visible on the Climate Pilot page as a filter",
+      "visibility": "Only visible on the Climate Pilot page as a filter.",
       "notes": null,
       "terms": [
         "Urban Agriculture",
@@ -297,6 +296,23 @@
         "Waste",
         "Circular Economy",
         "Adaptation"
+      ]
+    },
+    {
+      "id": "property-size",
+      "name": "Property Size",
+      "description": "For filtering properties.",
+      "appliedTo": [
+        "property"
+      ],
+      "mapFilter": false,
+      "visibility": "Only visible on the Properties page as a filter.",
+      "notes": null,
+      "terms": [
+        "Under 2,000 sq ft",
+        "2,000-5,000 sq ft",
+        "5,000-10,000 sq ft",
+        "10,000+ sq ft"
       ]
     }
   ]

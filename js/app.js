@@ -38,8 +38,10 @@
 
     /* ---------- helpers ---------- */
 
+    /* Page-scoped taxonomies are the ones the worksheet describes as living on a
+       single page ("Only visible on the Climate Pilot page as a filter"). */
     function isPageScoped(tax) {
-      return tax.visibility && tax.visibility !== "visitor-facing";
+      return !!tax.visibility && /^only\b/i.test(tax.visibility);
     }
 
     function badgesFor(tax) {
@@ -63,8 +65,11 @@
         frag.appendChild(el("p", { class: "applies-line", text: "Whether this becomes a map filter is not yet decided." }));
       }
 
-      if (isPageScoped(tax)) {
-        frag.appendChild(el("p", { class: "tax-note", text: tax.visibility + "." }));
+      if (tax.visibility) {
+        const vis = el("p", { class: isPageScoped(tax) ? "tax-note" : "applies-line" });
+        vis.appendChild(el("strong", { text: "Visitors see it: " }));
+        vis.appendChild(document.createTextNode(tax.visibility));
+        frag.appendChild(vis);
       }
       if (tax.notes) {
         frag.appendChild(el("p", { class: "tax-note", text: tax.notes }));

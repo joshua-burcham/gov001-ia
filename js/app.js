@@ -50,13 +50,9 @@
 
       frag.appendChild(el("p", { class: "tax-desc", text: tax.description }));
 
-      if (tax.mapFilter === true) {
-        frag.appendChild(el("p", { class: "map-note", text: "Appears as a filter on the interactive island map." }));
-      } else if (typeof tax.mapFilter === "string") {
-        frag.appendChild(el("p", { class: "map-note", text: "Appears as a filter on the interactive island map (" + tax.mapFilter.toLowerCase() + ")." }));
-      } else if (tax.mapFilter === null) {
-        frag.appendChild(el("p", { class: "applies-line", text: "Whether this becomes a map filter is not yet decided." }));
-      }
+      /* The worksheet's mapFilter values are deliberately not surfaced here.
+         Map behavior is explained once, in the Listing content type description;
+         repeating it per taxonomy confused the model being explained. */
 
       if (tax.visibility) {
         const vis = el("p", { class: isPageScoped(tax) ? "tax-note" : "applies-line" });

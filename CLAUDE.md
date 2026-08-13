@@ -32,9 +32,9 @@ Define taxonomy in one plain sentence. Then a toggle between two views of the sa
 - **By content type**: pick a content type, see every taxonomy applied to it, expandable to show the terms in each. Answers "what labels can an Event carry?"
 - **By taxonomy**: pick a taxonomy, see its description, its terms, and every content type it applies to. Answers "where does Focus show up?" and makes the cross-cutting taxonomies visible.
 
-Per-taxonomy metadata to surface as small badges or notes: whether it's a map filter, visitor visibility (default visible, page-scoped, or admin-leaning), and open notes (e.g. Season may become a custom field; Region/Area shouldn't be leaned on heavily).
+Per-taxonomy metadata to surface as plain-language notes inside the expanded detail: visitor visibility (where on the site a visitor actually encounters it) and open notes (e.g. Season may become a custom field; Region/Area shouldn't be leaned on heavily). Do not use badges or tags for this; short sentences read better and stay honest about nuance.
 
-The map connection should be explicit, not just a badge. Taxonomies marked as map filters become filter chips on the interactive island map; a short recurring note ("appears as a filter on the map") on those taxonomies ties the IA to the map without simulating map UI. Do not embed a map or mock one up.
+Do not discuss the map in the taxonomies section at all. Per-taxonomy map notes read as confusing next to the taxonomy's own filtering behavior, so the map is explained exactly once, in the Listing content type description. The `mapFilter` values are retained in the data as a record of the decision but are deliberately not rendered. Do not embed a map or mock one up.
 
 A small hover or click interaction connecting the two views is worth it if cheap: hovering a taxonomy highlights the content types it touches, or vice versa. Do not build filtering simulations, fake search, or anything that reads as product UI.
 

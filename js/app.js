@@ -44,13 +44,6 @@
       return !!tax.visibility && /^only\b/i.test(tax.visibility);
     }
 
-    function badgesFor(tax) {
-      const out = [];
-      if (tax.mapFilter) out.push(el("span", { class: "badge badge-map", text: "map filter" }));
-      if (isPageScoped(tax)) out.push(el("span", { class: "badge", text: "page-scoped" }));
-      return out;
-    }
-
     /* The body content shown for a taxonomy in either view. */
     function taxBody(tax, currentTypeId) {
       const frag = document.createDocumentFragment();
@@ -160,7 +153,6 @@
         const head = el("button", { class: "tax-row-head", type: "button", "aria-expanded": "false", "aria-controls": bodyId });
         head.appendChild(el("span", { class: "tax-row-caret", text: "▸", "aria-hidden": "true" }));
         head.appendChild(el("span", { text: tax.name }));
-        badgesFor(tax).forEach(b => head.appendChild(b));
         head.appendChild(el("span", { class: "tax-row-count", text: tax.terms.length + " terms" }));
         row.appendChild(head);
 
@@ -211,10 +203,7 @@
       $$(".tax-list-btn", list).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.id === tax.id)));
       lightUp(tax);
       detail.innerHTML = "";
-      const h = el("h3");
-      h.appendChild(el("span", { text: tax.name }));
-      badgesFor(tax).forEach(b => h.appendChild(b));
-      detail.appendChild(h);
+      detail.appendChild(el("h3", { text: tax.name }));
       detail.appendChild(taxBody(tax, null));
     }
 

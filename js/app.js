@@ -143,7 +143,7 @@
         typeById[selectedTypeId].name + " content can carry " + applicable.length +
         (applicable.length === 1 ? " taxonomy:" : " taxonomies:") }));
 
-      applicable.forEach((tax, i) => {
+      applicable.forEach(tax => {
         const row = el("div", { class: "tax-row" });
         const bodyId = "taxbody-" + tax.id;
         const head = el("button", { class: "tax-row-head", type: "button", "aria-expanded": "false", "aria-controls": bodyId });
@@ -170,7 +170,6 @@
         });
 
         rowsBox.appendChild(row);
-        if (i === 0) head.click();
       });
     }
 
